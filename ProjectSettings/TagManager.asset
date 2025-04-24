@@ -41,3 +41,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Background
+    uniqueID: 662074095
+    locked: 0
+  - name: Watar
+    uniqueID: 342841137
+    locked: 0
+  - name: Platforms
+    uniqueID: 6702995
+    locked: 0
