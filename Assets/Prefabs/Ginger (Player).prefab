@@ -15,7 +15,8 @@ GameObject:
   - component: {fileID: 6425122489992731967}
   - component: {fileID: 4896118894198151959}
   - component: {fileID: 546036088739809029}
-  m_Layer: 0
+  - component: {fileID: 1866789450637885825}
+  m_Layer: 8
   m_Name: Ginger (Player)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -97,7 +98,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1008496243
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 30
   m_Sprite: {fileID: 2073820811, guid: a235163a86d8f98418c470f984d748ce, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -119,7 +120,7 @@ CapsuleCollider2D:
   m_GameObject: {fileID: 4894126624104862671}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 9223e2f907cde7e4ca17cc03c73b9e4d, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -142,8 +143,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.03, y: -0.03}
-  m_Size: {x: 0.56, y: 0.95}
+  m_Offset: {x: -0.031830788, y: -0.040985525}
+  m_Size: {x: 0.5636616, y: 0.92802894}
   m_Direction: 0
 --- !u!50 &6425122489992731967
 Rigidbody2D:
@@ -160,7 +161,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 6
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -170,7 +171,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!114 &4896118894198151959
 MonoBehaviour:
@@ -214,3 +215,51 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65cfa7e0ae08ef04ea3f383a7b902bef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  runSpeed: 7
+  jumpSpeed: 20
+  climbSpeed: 5
+--- !u!61 &1866789450637885825
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4894126624104862671}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.045397043, y: -0.4367447}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.45303392, y: 0.12651062}
+  m_EdgeRadius: 0
