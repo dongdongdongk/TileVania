@@ -23149,7 +23149,7 @@ TilemapCollider2D:
   m_GameObject: {fileID: 1657057013}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: cfcccff386825cc4f9254192a65e6237, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -23599,6 +23599,56 @@ MonoBehaviour:
   m_Damping: 0.5
   m_MaxWindowSize: -1
   m_Padding: 0
+--- !u!1 &1997353430 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4894126624104862671, guid: ec2bbd17911835b43bd90217e2030d7f, type: 3}
+  m_PrefabInstance: {fileID: 4856424983432788203}
+  m_PrefabAsset: {fileID: 0}
+--- !u!61 &1997353436
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1997353430}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.045397043, y: -0.4367447}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.45303392, y: 0.12651062}
+  m_EdgeRadius: 0
 --- !u!1001 &4856424983432788203
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23608,8 +23658,12 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 546036088739809029, guid: ec2bbd17911835b43bd90217e2030d7f, type: 3}
+      propertyPath: runSpeed
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 546036088739809029, guid: ec2bbd17911835b43bd90217e2030d7f, type: 3}
       propertyPath: jumpSpeed
-      value: 25
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 4894126624104862671, guid: ec2bbd17911835b43bd90217e2030d7f, type: 3}
       propertyPath: m_Name
@@ -23619,9 +23673,13 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 4894126624104862671, guid: ec2bbd17911835b43bd90217e2030d7f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6425122489992731967, guid: ec2bbd17911835b43bd90217e2030d7f, type: 3}
       propertyPath: m_GravityScale
-      value: 8
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6425122489992731967, guid: ec2bbd17911835b43bd90217e2030d7f, type: 3}
       propertyPath: m_CollisionDetection
@@ -23667,10 +23725,33 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7766985001341200496, guid: ec2bbd17911835b43bd90217e2030d7f, type: 3}
+      propertyPath: m_Size.x
+      value: 0.5636616
+      objectReference: {fileID: 0}
+    - target: {fileID: 7766985001341200496, guid: ec2bbd17911835b43bd90217e2030d7f, type: 3}
+      propertyPath: m_Size.y
+      value: 0.92802894
+      objectReference: {fileID: 0}
+    - target: {fileID: 7766985001341200496, guid: ec2bbd17911835b43bd90217e2030d7f, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 9223e2f907cde7e4ca17cc03c73b9e4d, type: 2}
+    - target: {fileID: 7766985001341200496, guid: ec2bbd17911835b43bd90217e2030d7f, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.031830788
+      objectReference: {fileID: 0}
+    - target: {fileID: 7766985001341200496, guid: ec2bbd17911835b43bd90217e2030d7f, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.040985525
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4894126624104862671, guid: ec2bbd17911835b43bd90217e2030d7f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1997353436}
   m_SourcePrefab: {fileID: 100100000, guid: ec2bbd17911835b43bd90217e2030d7f, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
