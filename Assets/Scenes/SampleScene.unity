@@ -23837,6 +23837,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 546036088739809029, guid: ec2bbd17911835b43bd90217e2030d7f, type: 3}
+      propertyPath: deathKick.x
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 546036088739809029, guid: ec2bbd17911835b43bd90217e2030d7f, type: 3}
+      propertyPath: deathKick.y
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 1866789450637885825, guid: ec2bbd17911835b43bd90217e2030d7f, type: 3}
       propertyPath: m_Material
       value: 
