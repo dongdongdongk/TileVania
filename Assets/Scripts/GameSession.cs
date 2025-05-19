@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -7,6 +8,9 @@ using UnityEngine.SceneManagement;
 public class GameSession : MonoBehaviour
 {
     [SerializeField] int playerLives = 3;
+    [SerializeField] int score = 0;
+    [SerializeField] TextMeshProUGUI livesText;
+    [SerializeField] TextMeshProUGUI scoreText;
     void Awake()
     {
         int numGameSessions = FindObjectsOfType<GameSession>().Length;
@@ -18,18 +22,35 @@ public class GameSession : MonoBehaviour
         }
     }
 
-    public void ProcessPlayerDeath() {
-        if (playerLives > 1) {
+    void Start()
+    {
+        livesText.text = playerLives.ToString();
+        scoreText.text = score.ToString();
+    }
+
+    public void ProcessPlayerDeath()
+    {
+        if (playerLives > 1)
+        {
             TakeLife();
         }
-        else {
+        else
+        {
             ResetGameSession();
         }
     }
 
-    void TakeLife() {
+    public void AddToScore(int pointsToAdd)
+    {
+        score += pointsToAdd;
+        scoreText.text = score.ToString();
+    }
+
+    void TakeLife()
+    {
         playerLives--;
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        livesText.text = playerLives.ToString();
         SceneManager.LoadScene(currentSceneIndex);
     }
 
