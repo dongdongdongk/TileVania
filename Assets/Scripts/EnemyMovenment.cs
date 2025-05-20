@@ -11,19 +11,25 @@ public class EnemyMovenment : MonoBehaviour
         myRigidbody = GetComponent<Rigidbody2D>();
     }
 
-    
+
     void Update()
     {
         myRigidbody.velocity = new Vector2(moveSpeed, 0f);
     }
 
-    void OnTriggerExit2D(Collider2D other) {
+    void OnTriggerExit2D(Collider2D other)
+    {
+        if ((LayerMask.GetMask("Ground") & (1 << other.gameObject.layer)) == 0)
+        {
+            return; // Ground가 아님
+        }
         moveSpeed = -moveSpeed;
         FlipEnemyFacing();
-        
+
     }
 
-    void FlipEnemyFacing() {
+    void FlipEnemyFacing()
+    {
         transform.localScale = new Vector2(-Mathf.Sign(myRigidbody.velocity.x), 1f);
     }
 }
